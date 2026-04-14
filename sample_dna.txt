@@ -1,0 +1,27 @@
+# Genetic Analyzer Toolkit — Sample DNA Input File
+# =================================================
+# Lines starting with '#' are treated as comments and are ignored.
+# Lines starting with '>' are FASTA-style headers and are also skipped.
+# Each remaining line is treated as one DNA sequence.
+#
+# Format rules:
+#  - Only the characters A, T, G, C are allowed (case-insensitive).
+#  - For amino acid translation (Option 5), the length must be a multiple of 3.
+#  - For mutation detection (Option 4), enter two sequences directly in the menu.
+#
+# ─────────────────────────────────────────────────────────────────────
+# Sample 1: Short coding sequence (contains ATG start codon + stop)
+> Sequence_1 | Human beta-globin (illustrative)
+ATGGTGCATCTGACTCCTGTGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTGAACGTGGATGAAGTTGGTGGT
+# ─────────────────────────────────────────────────────────────────────
+# Sample 2: A simple test sequence for pattern searching
+> Sequence_2 | Synthetic test
+AATGATCGATCGATCGTAGCTAGCTAGCATGATCATG
+# ─────────────────────────────────────────────────────────────────────
+# Sample 3: Minimal sequence — just a start and stop codon
+> Sequence_3 | Minimal ORF
+ATGTAA
+# ─────────────────────────────────────────────────────────────────────
+# Sample 4: High GC-content sequence
+> Sequence_4 | High-GC synthetic
+GCGCGGCGGCGCGCGGCATGCCCGGGCGCGCGCGCTAA

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genetic Analyzer Toolkit | DNA Analysis Platform</title>
+  <meta name="description" content="A professional bioinformatics web tool for DNA analysis, RNA transcription, mutation detection, codon translation, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Particle Background ── -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🧬</span>
+        <span class="logo-text">GAT <span class="logo-sub">v1.0</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#analyzer">Analyzer</a></li>
+        <li><a href="#features-grid">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li>
+          <a href="https://github.com" target="_blank" class="nav-cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-helix">
+      <canvas id="helix-canvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">Bioinformatics · C Backend · Portfolio Project</div>
+      <h1 class="hero-title">
+        <span class="gradient-text" id="typed-title">Genetic Analyzer</span><br/>
+        <span class="hero-sub">Toolkit</span>
+      </h1>
+      <p class="hero-desc">
+        A professional DNA analysis platform powered by a C backend.
+        Transcribe, translate, detect mutations, and visualize genetic data — all in one place.
+      </p>
+      <div class="hero-actions">
+        <a href="#analyzer" class="btn btn-primary">Launch Analyzer</a>
+        <a href="#features-grid" class="btn btn-ghost">Explore Features</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-val">8+</span><span class="stat-lbl">Analysis Tools</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-val">64</span><span class="stat-lbl">Codons Mapped</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-val">C11</span><span class="stat-lbl">Backend Standard</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FEATURES GRID
+  ════════════════════════════════════════ -->
+  <section id="features-grid">
+    <div class="section-header">
+      <h2>Analysis <span class="gradient-text">Features</span></h2>
+      <p>Everything you need to analyze DNA sequences</p>
+    </div>
+    <div class="grid-cards">
+      <div class="feat-card"><span class="feat-icon">🔬</span><h3>DNA → RNA</h3><p>Transcribe DNA to mRNA using standard rules</p></div>
+      <div class="feat-card"><span class="feat-icon">🔗</span><h3>Complement</h3><p>Generate complementary & reverse complement strands</p></div>
+      <div class="feat-card"><span class="feat-icon">📊</span><h3>GC Content</h3><p>Calculate GC percentage with visual indicators</p></div>
+      <div class="feat-card"><span class="feat-icon">⚡</span><h3>Mutation Detection</h3><p>Compare sequences and highlight every SNP</p></div>
+      <div class="feat-card"><span class="feat-icon">🧪</span><h3>Translation</h3><p>Codon-to-amino acid translation with start/stop codons</p></div>
+      <div class="feat-card"><span class="feat-icon">🎯</span><h3>Pattern Search</h3><p>Find all motif occurrences with position tracking</p></div>
+      <div class="feat-card"><span class="feat-icon">↩️</span><h3>Reverse Sequence</h3><p>Reverse and reverse-complement any sequence</p></div>
+      <div class="feat-card"><span class="feat-icon">📈</span><h3>Nucleotide Freq</h3><p>Frequency charts for A, T, G, C distribution</p></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       MAIN ANALYZER
+  ════════════════════════════════════════ -->
+  <section id="analyzer">
+    <div class="section-header">
+      <h2>DNA <span class="gradient-text">Analyzer</span></h2>
+      <p>Enter your sequence below and select an analysis tool</p>
+    </div>
+
+    <!-- ── Input Card ── -->
+    <div class="input-card">
+      <div class="input-header">
+        <span class="input-label">DNA Sequence Input</span>
+        <div class="input-actions-top">
+          <span id="live-length" class="badge-info">0 bp</span>
+          <span id="live-gc" class="badge-info">GC: —</span>
+        </div>
+      </div>
+      <textarea
+        id="dna-input"
+        placeholder="Enter DNA sequence here — only A, T, G, C characters…&#10;&#10;Example: ATGCGATCGATCGATCGTAA"
+        spellcheck="false"
+        autocomplete="off"
+      ></textarea>
+      <div class="input-controls">
+        <button class="btn btn-primary" id="validate-btn">✔ Validate</button>
+        <label class="btn btn-ghost file-label" for="file-upload">
+          📁 Upload .txt
+          <input type="file" id="file-upload" accept=".txt" hidden />
+        </label>
+        <button class="btn btn-outline" id="sample-btn">🔬 Load Example</button>
+        <button class="btn btn-danger-ghost" id="clear-btn">✕ Clear</button>
+      </div>
+      <div id="validation-msg" class="validation-msg hidden"></div>
+    </div>
+
+    <!-- ── Feature Tabs ── -->
+    <div class="tabs-wrapper">
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-tab="rna">🔬 RNA</button>
+        <button class="tab" data-tab="complement">🔗 Complement</button>
+        <button class="tab" data-tab="gc">📊 GC Content</button>
+        <button class="tab" data-tab="mutation">⚡ Mutations</button>
+        <button class="tab" data-tab="translate">🧪 Translation</button>
+        <button class="tab" data-tab="pattern">🎯 Pattern</button>
+        <button class="tab" data-tab="reverse">↩️ Reverse</button>
+        <button class="tab" data-tab="frequency">📈 Frequency</button>
+        <button class="tab" data-tab="file">📁 File</button>
+      </div>
+    </div>
+
+    <!-- ── Panels ── -->
+    <div class="panels-wrapper">
+
+      <!-- Panel: RNA -->
+      <div id="panel-rna" class="panel active">
+        <div class="panel-header"><h3>DNA → RNA Transcription</h3>
+          <p>Converts DNA to mRNA: A→U, T→A, G→C, C→G</p></div>
+        <button class="btn btn-primary run-btn" data-action="runRNA">▶ Transcribe</button>
+        <div class="result-box" id="result-rna">
+          <div class="result-placeholder">Run the analysis to see results here.</div>
+        </div>
+      </div>
+
+      <!-- Panel: Complement -->
+      <div id="panel-complement" class="panel">
+        <div class="panel-header"><h3>Complementary DNA Strand</h3>
+          <p>Watson-Crick pairing: A↔T, G↔C</p></div>
+        <button class="btn btn-primary run-btn" data-action="runComplement">▶ Generate</button>
+        <div class="result-box" id="result-complement">
+          <div class="result-placeholder">Run the analysis to see results here.</div>
+        </div>
+      </div>
+
+      <!-- Panel: GC Content -->
+      <div id="panel-gc" class="panel">
+        <div class="panel-header"><h3>GC Content Analysis</h3>
+          <p>Higher GC% = higher melting temperature</p></div>
+        <button class="btn btn-primary run-btn" data-action="runGC">▶ Calculate</button>
+        <div class="result-box" id="result-gc">
+          <div class="result-placeholder">Run the analysis to see results here.</div>
+        </div>
+      </div>
+
+      <!-- Panel: Mutations -->
+      <div id="panel-mutation" class="panel">
+        <div class="panel-header"><h3>Mutation Detection</h3>
+          <p>Compare two equal-length sequences. Differences are highlighted as SNPs.</p></div>
+        <div class="dual-input">
+          <div class="dual-field">
+            <label>Reference Sequence</label>
+            <textarea id="ref-input" placeholder="Reference DNA (e.g. ATGCGATCGA)" spellcheck="false"></textarea>
+          </div>
+          <div class="dual-field">
+            <label>Mutant Sequence</label>
+            <textarea id="mut-input" placeholder="Mutant DNA (same length)" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-primary run-btn" data-action="runMutation">▶ Detect Mutations</button>
+        <div class="result-box" id="result-mutation">
+          <div class="result-placeholder">Enter two sequences above and click Detect.</div>
+        </div>
+      </div>
+
+      <!-- Panel: Translation -->
+      <div id="panel-translate" class="panel">
+        <div class="panel-header"><h3>Codon → Amino Acid Translation</h3>
+          <p>Begins at ATG (start) and stops at TAA/TAG/TGA. Length must be multiple of 3.</p></div>
+        <button class="btn btn-primary run-btn" data-action="runTranslate">▶ Translate</button>
+        <div class="result-box" id="result-translate">
+          <div class="result-placeholder">Run the analysis to see results here.</div>
+        </div>
+      </div>
+
+      <!-- Panel: Pattern -->
+      <div id="panel-pattern" class="panel">
+        <div class="panel-header"><h3>Pattern / Motif Search</h3>
+          <p>Find all occurrences of a subsequence within the main sequence.</p></div>
+        <div class="pattern-input-row">
+          <input type="text" id="pattern-input" placeholder="Enter pattern (e.g. ATG)" maxlength="100" spellcheck="false" />
+          <button class="btn btn-primary" id="run-pattern-btn">▶ Search</button>
+        </div>
+        <div class="result-box" id="result-pattern">
+          <div class="result-placeholder">Enter a pattern above and click Search.</div>
+        </div>
+      </div>
+
+      <!-- Panel: Reverse -->
+      <div id="panel-reverse" class="panel">
+        <div class="panel-header"><h3>Reverse Sequence</h3>
+          <p>Generates the reverse and reverse complement (used in primer design)</p></div>
+        <button class="btn btn-primary run-btn" data-action="runReverse">▶ Reverse</button>
+        <div class="result-box" id="result-reverse">
+          <div class="result-placeholder">Run the analysis to see results here.</div>
+        </div>
+      </div>
+
+      <!-- Panel: Frequency -->
+      <div id="panel-frequency" class="panel">
+        <div class="panel-header"><h3>Nucleotide Frequency Analysis</h3>
+          <p>Count and visualise the distribution of A, T, G, C bases</p></div>
+        <button class="btn btn-primary run-btn" data-action="runFrequency">▶ Analyse</button>
+        <div class="result-box" id="result-frequency">
+          <div class="result-placeholder">Run the analysis to see results here.</div>
+        </div>
+        <div class="chart-container hidden" id="chart-container">
+          <canvas id="freq-chart"></canvas>
+        </div>
+      </div>
+
+      <!-- Panel: File -->
+      <div id="panel-file" class="panel">
+        <div class="panel-header"><h3>File Input & Batch Analysis</h3>
+          <p>Upload a plain-text or FASTA-style .txt file. Lines starting with # or > are skipped.</p></div>
+        <div class="drop-zone" id="drop-zone">
+          <div class="drop-icon">📂</div>
+          <p>Drag & drop a <strong>.txt</strong> file here</p>
+          <p class="drop-sub">or</p>
+          <label class="btn btn-ghost" for="file-upload-panel">Browse File</label>
+          <input type="file" id="file-upload-panel" accept=".txt" hidden />
+        </div>
+        <div class="result-box hidden" id="result-file">
+          <div class="result-placeholder">File contents will appear here.</div>
+        </div>
+      </div>
+
+    </div><!-- /panels-wrapper -->
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>About This <span class="gradient-text">Project</span></h2>
+        <p>The Genetic Analyzer Toolkit is a full-stack bioinformatics project. The backend is written in <strong>C (C11 standard)</strong>, structured across <code>main.c</code>, <code>dna_utils.c</code>, and <code>file_handler.c</code>.</p>
+        <p style="margin-top:1rem">This web frontend can operate in two modes: <strong>standalone JS simulation</strong> (no server required) or connected to a <strong>C backend API</strong> via <code>fetch()</code> calls — just swap the endpoint constants at the top of <code>app.js</code>.</p>
+        <div class="tech-tags">
+          <span class="tag">C11</span><span class="tag">GCC</span><span class="tag">HTML5</span>
+          <span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Chart.js</span>
+          <span class="tag">FASTA</span><span class="tag">Bioinformatics</span>
+        </div>
+      </div>
+      <div class="about-code">
+        <div class="code-window">
+          <div class="code-titlebar"><span></span><span></span><span></span> dna_utils.c</div>
+          <pre><code><span class="c-comment">/* DNA → RNA Transcription */</span>
+<span class="c-kw">void</span> <span class="c-fn">dna_to_rna</span>(<span class="c-kw">const char</span> *dna, <span class="c-kw">char</span> *rna) {
+  <span class="c-kw">for</span> (<span class="c-kw">size_t</span> i = <span class="c-num">0</span>; dna[i]; i++) {
+    <span class="c-kw">switch</span> (dna[i]) {
+      <span class="c-kw">case</span> <span class="c-str">'A'</span>: rna[i] = <span class="c-str">'U'</span>; <span class="c-kw">break</span>;
+      <span class="c-kw">case</span> <span class="c-str">'T'</span>: rna[i] = <span class="c-str">'A'</span>; <span class="c-kw">break</span>;
+      <span class="c-kw">case</span> <span class="c-str">'G'</span>: rna[i] = <span class="c-str">'C'</span>; <span class="c-kw">break</span>;
+      <span class="c-kw">case</span> <span class="c-str">'C'</span>: rna[i] = <span class="c-str">'G'</span>; <span class="c-kw">break</span>;
+    }
+  }
+  rna[strlen(dna)] = <span class="c-str">'\0'</span>;
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🧬</span>
+        <span class="logo-text">Genetic Analyzer Toolkit</span>
+      </div>
+      <p class="footer-copy">Built with C · HTML · CSS · JavaScript &nbsp;|&nbsp; MIT License</p>
+      <div class="footer-links">
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="#analyzer">Analyzer</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
