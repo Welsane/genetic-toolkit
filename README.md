@@ -1,9 +1,6 @@
 # 🧬 Genetic Analyzer Toolkit (GAT)
 
 > A professional, modular, menu-driven **bioinformatics toolkit** written in pure C.  
-> Designed as a resume-worthy GitHub portfolio project demonstrating both C programming mastery and domain knowledge in molecular biology.
-
----
 
 ## 📋 Features
 
@@ -36,33 +33,6 @@ genetic_analyzer_toolkit/
 ├── sample_dna.txt   ← Example input file with annotated sequences
 ├── Makefile         ← Cross-platform build automation
 └── README.md        ← This file
-```
-
----
-
-## 🔧 Building & Running
-
-### Requirements
-- GCC (≥ 9.0 recommended) or any C11-compliant compiler  
-- Windows: [MinGW-w64](https://www.mingw-w64.org/) or [MSYS2](https://www.msys2.org/)  
-- Linux/macOS: GCC available via package manager
-
-### Compile (manual)
-```bash
-gcc -Wall -Wextra -std=c11 -o gat main.c dna_utils.c file_handler.c
-```
-
-### Compile (with Makefile)
-```bash
-make          # build
-make run      # build + launch immediately
-make clean    # remove compiled output
-```
-
-### Run
-```bash
-./gat          # Linux / macOS
-gat.exe        # Windows
 ```
 
 ---
@@ -176,26 +146,3 @@ Translation : Methionine (Start) → STOP
 | **Motif Search** | Finding conserved sequence patterns is essential in regulatory element analysis |
 
 ---
-
-## 🛠 Implementation Highlights
-
-- **Modular architecture** — Logic is cleanly separated across `main.c`, `dna_utils.c`, and `file_handler.c`
-- **Input validation** — Every sequence is validated before processing; up to 3 retry attempts on bad input
-- **Codon table** — Full 64-codon standard genetic code lookup implemented as a struct array
-- **File support** — Accepts plain text and FASTA-style files; comment lines (`#`) and headers (`>`) are safely skipped
-- **Callback pattern** — Batch file processing uses a function pointer callback for extensibility
-- **ANSI colours** — Colour-coded terminal output with graceful Windows 10+ VT100 support
-- **No external dependencies** — Compiles with any standard C11 compiler, no libraries required
-
----
-
-## 📄 License
-
-MIT License — free to use, modify, and distribute with attribution.
-
----
-
-## 👤 Author
-
-Built as part of a **C Programming & Bioinformatics Portfolio Project**.  
-Feel free to fork, extend, and submit pull requests!
