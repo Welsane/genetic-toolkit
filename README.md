@@ -1,11 +1,9 @@
-# 🧬 Genetic Analyzer Toolkit (GAT)
+# Genetic Analyzer Toolkit (GAT)
 
 > A professional, modular, menu-driven **bioinformatics toolkit** written in pure C.  
 
-## 📋 Features
+# Features
 
-| # | Feature | Description |
-|---|---------|-------------|
 | 1 | **DNA → RNA Transcription** | Converts a DNA sequence to its mRNA transcript (A→U, T→A, G→C, C→G) |
 | 2 | **Complementary DNA** | Generates the complementary strand (A↔T, G↔C) and its reverse complement |
 | 3 | **GC Content Analysis** | Calculates GC% to 2 decimal places with an ASCII progress bar |
@@ -19,7 +17,7 @@
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 genetic_analyzer_toolkit/
