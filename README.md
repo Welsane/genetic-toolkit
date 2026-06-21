@@ -37,29 +37,7 @@ genetic_analyzer_toolkit/
 
 ---
 
-## 📸 Sample Session
-
-```
-  ╔══════════════════════════════════════════════════╗
-  ║                                                  ║
-  ║    G E N E T I C   A N A L Y Z E R              ║
-  ║               T O O L K I T   v1.0              ║
-  ║                                                  ║
-  ║  DNA Analysis · Translation · Mutation Scan      ║
-  ║                                                  ║
-  ╚══════════════════════════════════════════════════╝
-
-  ╔══════ MAIN MENU ════════════════════════╗
-  ║  1.  DNA → RNA Transcription            ║
-  ║  2.  Complementary DNA Strand           ║
-  ...
-```
-
----
-
-## 🔬 Sample Inputs & Outputs
-
-### Option 1 — DNA → RNA
+## — DNA → RNA
 
 ```
 Enter DNA sequence: ATGCTAGCTA
@@ -67,7 +45,7 @@ DNA  (5'→3'): ATGCTAGCTA
 mRNA (5'→3'): UACGAUCGAU
 ```
 
-### Option 3 — GC Content
+## — GC Content
 
 ```
 Enter DNA sequence: ATGCGCATGC
@@ -79,7 +57,7 @@ GC  [███████████████░░░░░░░░░] 6
 AT  [██████████░░░░░░░░░░░░░░░] 40.00%
 ```
 
-### Option 4 — Mutation Detection
+## — Mutation Detection
 
 ```
 Enter REFERENCE DNA sequence: ATGCGATCGA
@@ -93,7 +71,7 @@ Position   Reference  Mutant
 Total mutations found: 2
 ```
 
-### Option 5 — Translation
+## — Translation
 
 ```
 Enter DNA coding sequence: ATGTTTTGGAAATAA
@@ -101,7 +79,7 @@ Protein chain:
 Methionine (Start) → Phenylalanine → Tryptophan → Lysine → STOP
 ```
 
-### Option 6 — Pattern Search
+## — Pattern Search
 
 ```
 Enter DNA sequence: ATGATCATGATCATG
@@ -116,7 +94,7 @@ Position     Match
 Total occurrences of "ATG": 3
 ```
 
-### Option 9 — Load from File
+## — Load from File
 
 ```
 Enter file path: sample_dna.txt
