@@ -109,7 +109,7 @@ Translation : Methionine (Start) → STOP
 
 ---
 
-## 🧬 Biological Background
+## Biological Background
 
 | Concept | Explanation |
 |---------|-------------|
